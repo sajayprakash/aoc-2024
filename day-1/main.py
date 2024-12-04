@@ -17,3 +17,15 @@ for i in range(0,len(col1)):
     sum+=pair_diff
 
 print(sum)
+
+similarity_score = 0
+
+for i in range(0,len(col1)):
+    current_element = col1[i]
+    current_element_count = 0
+    for j in range(0,len(col2)):
+        if current_element == col2[j]:
+            current_element_count+= 1
+    similarity_score+=current_element * current_element_count
+
+print(similarity_score)
